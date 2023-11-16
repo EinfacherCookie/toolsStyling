@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap');
+
+.TOOLSList{
+  background: #02B58E;
+  width: 550px;
+  font-family: "Poppins";
+  padding: 10px 0;
+  border: 4px solid #014E3D;
+  border-radius: 15px;
+}
+
+ol {
+  list-style: none;
+  counter-reset: steps;
+  padding: 0 20px;
+}
+ol ol{
+  padding: 0 60px;
+}
+li{
+  margin: 2.5px 0;
+  width: 100%;
+}
+li:hover{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  transition: .2s;
+  transform: translate(1px, -1px);
+  text-decoration: underline;
+}
+ol li {
+  counter-increment: steps;
+}
+ol li::before {
+  content: counter(steps);
+  margin-right: 0.5rem;
+  background: #014E3D;
+  color: #FFeC9D;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  line-height: 1.2em;
+  box-shadow: 2px 2px 4px black;
+}
+ol ol li::before {
+  background: #FFeC9D;
+  color: #014E3D;
+}
+
+ol ol ol li::before {
+  background: #02B58E;
+  border: 1px solid  #014E3D;
+  color: #FFEC9D;
+}
